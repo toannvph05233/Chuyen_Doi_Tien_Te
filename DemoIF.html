@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="findMax()">=</button>
+</body>
+</html>
+
+<script>
+    let year = 1000;
+    if (year % 4 === 0) {
+        if (year % 100 === 0 && year % 400 !== 0) {
+            alert("Không Là năm nhuận")
+        } else {
+            alert("Phải năm nhuận")
+        }
+    } else {
+        alert("Không phải năm nhuận")
+    }
+
+</script>

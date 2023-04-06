@@ -5,14 +5,22 @@
     <title>Title</title>
 </head>
 <body>
-Name: <input placeholder="nhập name" id="name">
-<button onclick="show()">Show</button>
+number1: <input placeholder="nhập number1" id="number1">
+number2: <input placeholder="nhập number2" id="number2">
+<button onclick="sumNumber()">Show</button>
+<h1 id="display"></h1>
 </body>
 </html>
 
 <script>
-    function show() {
-        let inputName = document.getElementById("name");
-        alert(inputName.value);
+    function sumNumber() {
+      let inputNumber1 = document.getElementById("number1");
+      let inputNumber2 = document.getElementById("number2");
+      // lấy thẻ h1 về
+      let display = document.getElementById("display");
+
+      let number1 = parseInt(inputNumber1.value);
+      let number2 = parseInt(inputNumber2.value);
+      display.innerText = "kết quả của phép cộng là : " + (number1 + number2);
     }
 </script>

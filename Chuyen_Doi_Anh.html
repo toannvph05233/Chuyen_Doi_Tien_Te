@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img onclick="doi_Anh_C2()" id="img" src="https://tinhayvip.com/wp-content/uploads/2022/06/vsbg-5.jpg" width="300"
+     height="400">
+</body>
+</html>
+
+<script>
+    const anh1 = "https://tinhayvip.com/wp-content/uploads/2022/06/vsbg-5.jpg";
+    const anh2 = "https://openseauserdata.com/files/02d992a4c7039936aea0bce0ec7a5e1e.jpg";
+    const anh3 = "https://songkhoemoingay.com/wp-content/uploads/2019/03/gai_xinh_vsbg-1.jpg";
+
+    function doi_Anh() {
+        let imgB = document.getElementById("img");
+        let srcB = imgB.src;
+
+        if (srcB === anh1) {
+            imgB.src = anh2;
+        } else if (srcB === anh2) {
+            imgB.src = anh3;
+        } else {
+            imgB.src = anh1;
+        }
+    }
+
+    let count = 1;
+    function doi_Anh_C2() {
+        let img = document.getElementById("img");
+        if (count === 1) {
+            img.src = anh2;
+            count ++;
+        } else if (count === 2) {
+            img.src = anh3;
+            count ++;
+        } else {
+            img.src = anh1
+            count = 1;
+        }
+    }
+</script>
+
+

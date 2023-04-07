@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<img id="anh" src="https://tinhayvip.com/wp-content/uploads/2022/06/vsbg-01.jpg"
+     width="300" height="200" style="position: relative; left: 100px">
+
+</body>
+</html>
+
+<script>
+    let px = 100;
+    let py = 0;
+
+    function di_Chuyen_Phai() {
+        let imgB = document.getElementById("anh");
+        px += 10;
+        imgB.style.left = px + "px";
+    }
+
+    function di_Chuyen_Trai() {
+        let imgB = document.getElementById("anh");
+        px -= 10;
+        imgB.style.left = px + "px";
+    }
+
+    function di_Chuyen_Xuong() {
+        let imgB = document.getElementById("anh");
+        py += 10;
+        imgB.style.top = py + "px";
+    }
+
+    function di_Chuyen_Len() {
+        let imgB = document.getElementById("anh");
+        py -= 10;
+        imgB.style.top = py + "px";
+    }
+
+
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                di_Chuyen_Trai();
+                break;
+            case 39:
+                di_Chuyen_Phai()
+                break;
+            case 38:
+                di_Chuyen_Len()
+                break;
+            case 40:
+               di_Chuyen_Xuong()
+                break;
+        }
+    }
+    function docReady() {
+        // thêm hành động khi nhấn phím thì sẽ chạy hàm moveSelection
+        window.addEventListener('keydown', moveSelection);
+    }
+
+
+    docReady();
+</script>

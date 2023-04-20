@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    class Home {
+        cua = 1;
+        mai = 1;
+        lanCan = 1;
+
+        constructor(cua, mai, lanCan) {
+            this.cua = cua;
+            this.mai = mai;
+            this.lanCan = lanCan;
+        }
+
+
+        hienThi = function () {
+            console.log(this.cua + " --- " + this.mai + " --- " + this.lanCan);
+        }
+    }
+
+
+    let nha_Vuong = new Home("Gỗ Lim","Lá","người");
+    nha_Vuong.cua = "Tre";
+    nha_Vuong.mai = "trời";
+    nha_Vuong.hienThi();
+
+    let nha_Long = new Home("Sắt","Mái Tôn","không khí");
+    nha_Long.hienThi();
+
+
+
+
+</script>

@@ -6,17 +6,26 @@
 
 </head>
 <body>
-<input value="Toàn" id="inputName">
-<button onclick="hienthi()">Show</button>
-<h1 id="display">Toàn </h1>
 </body>
 </html>
 <script>
-function hienthi() {
-    let inputB = document.getElementById("inputName");
-    let h1B = document.getElementById("display");
-    h1B.innerText = inputB.value;
-    inputB.value = "Toàn"
+   let a = 5;
+   function change(b) {
+       a = 10;
+   }
 
-}
+   change(a);
+   alert(a);
+
+   // let arr = [1,4,2]
+   // function changeArray(arr) {
+   //     arr = [1,2,3];
+   //     arr.push(55);
+   //
+   // }
+   // changeArray(arr);
+   // alert(arr)
+
+
+
 </script>

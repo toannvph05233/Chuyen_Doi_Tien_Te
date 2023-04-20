@@ -5,6 +5,7 @@
  Code chạy khi hàm được gọi.
 
  */
+
 function demoPrompt(){
     let a,b;
     a = prompt('nhập số a');

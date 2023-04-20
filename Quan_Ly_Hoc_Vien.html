@@ -23,11 +23,22 @@
 
 
 <script>
-    let arr = [
-        ["Ny Toàn", 19, "https://tinhayvip.com/wp-content/uploads/2022/06/vsbg-5.jpg"],
-        ["Ny Khanh", 19, "https://biztime.com.vn/upload/photos/2019/05/xtNWdVWaVDGDPuH7IN1n_31_c8c20cf5237587dd4a00ad1a72b494f8_image.jpg"],
-        ["Ny Tùng", 19, "https://openseauserdata.com/files/02d992a4c7039936aea0bce0ec7a5e1e.jpg"]
-    ]
+    class NhanVien{
+        name;
+        age;
+        img;
+        constructor(name, age, img) {
+            this.name = name;
+            this.age = age;
+            this.img = img;
+        }
+    }
+
+    let nyToan =  new NhanVien("Ny Toàn", 19, "https://tinhayvip.com/wp-content/uploads/2022/06/vsbg-5.jpg");
+    let nyKhanh =  new NhanVien("Ny Khanh", 19, "https://biztime.com.vn/upload/photos/2019/05/xtNWdVWaVDGDPuH7IN1n_31_c8c20cf5237587dd4a00ad1a72b494f8_image.jpg");
+    let nyTung =  new NhanVien("Ny Tùng", 19, "https://openseauserdata.com/files/02d992a4c7039936aea0bce0ec7a5e1e.jpg");
+
+    let arr = [nyToan,nyTung,nyKhanh]
 
     hienthiNY();
 
@@ -35,9 +46,9 @@
         let str = "";
         for (let i = 0; i < arr.length; i++) {
             str += "<tr>" +
-                "        <td>" + arr[i][0] + "</td>" +
-                "        <td>" + arr[i][1] + "</td>" +
-                "        <td><img src='" + arr[i][2] + "' width='150' height='200'></td>" +
+                "        <td>" + arr[i].name + "</td>" +
+                "        <td>" + arr[i].age + "</td>" +
+                "        <td><img src='" + arr[i].img + "' width='150' height='200'></td>" +
                 "        <td><button onclick='chiaTay(" + i + ")'>Delete</button></td>" +
                 "    </tr>"
         }
@@ -48,9 +59,8 @@
         let name = document.getElementById("name").value;
         let age = document.getElementById("age").value;
         let img = document.getElementById("img").value;
-        let arr2 = [name, age, img];
-        arr.push(arr2);
-        console.log(arr)
+        let newObj = new NhanVien(name,age,img);
+        arr.push(newObj);
         hienthiNY();
     }
 
